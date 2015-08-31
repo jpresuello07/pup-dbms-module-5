@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thesis Archive</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script type="text/javascript" src='/static/jquery-1.11.3.js'></script>
+</head>
+<body>
+<div class='main'>
+    <h1>Welcome to Thesis Archive, {{user}}</h1>
+    <hr>
+    <div class='form-section'>
+        <h3>New Thesis Entry</h3>
+        <!-- your form here -->
+        <form class="create-form">
+        <div> <select name = "year">
+            <option>Year</option>
+            <option value = "2011">2011</option>
+            <option value = "2012">2012</option>
+            <option value = "2013">2013</option>
+            <option value = "2014">2014</option>
+            <option value = "2015">2015</option>
+        </select></div>
+        <div> <input required type="text" name="title1" placeholder ="Title"></text></div>
+        <div> <textarea name="abstract" rows="10" cols="50" placeholder ="Abstract"></textarea></div>
+        <div> <input required type="text" name="adviser" placeholder ="Adviser"></div>
+        <div> <select name = "section">
+            <option>Section</option>
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+        </select></div>
+        <div><input type="submit" value="Submit"></text></div><br>
+        <a href="{{ logout_url }}">LOGOUT</a>
+
+    </div>
+    <div class='list-section'>
+        <!-- your list here -->
+        <h3 class="list-title">THESIS LIST</h3>
+        <ul class="thesis-list"></ul>
+    </div>
+</div>
+
+
+<script type="text/javascript" src='/static/script.js'></script>
+</body>
+</html>
